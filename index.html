@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Collision Warning System</title>
+  <title>Procrastination Preventer</title>
 
   <!-- Prism.js syntax highlighting -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
@@ -46,51 +46,65 @@
   </nav>
  <button class="print-button" onclick="window.print()" style="position: fixed; bottom: 24px; right: 24px; padding: 10px 16px; background: #2563eb; color: white; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.15); font-size: 0.9rem; z-index: 2000;">  Print This Page </button>
 
-  <h1 id="top">Collision Saftey System </h1>
+  <h1 id="top">Procrastination Preventer </h1>
 <div id="print-hero">
     <img src="" alt="">
 </div>
 
   <section id="information">
     <h2>Project Information</h2>
-    <p><strong>Course:</strong> TECH 117 (Computer Engineering Technology, Fall 2025)</p>
+    <p><strong>Course:</strong> TECH 117 (Electronics Engineering Technology, Fall 2026)</p>
     <p><strong>Instructor:</strong> Ph.D. Ana Rodrigues</p>
     <p><strong>Team Members:</strong></p>
     <ul>
-      <li>Ana de Oliveira Rodrigues</li>
+      <li>Kayden Sukhlal</li>
+      <li>Jaideep Roy</li>
+      <li>Sebastian Osterling</li>
+      <li>Arjo Gargantiel</li>
     </ul>
   </section>
 
-  <section id="introduction">
+<section id="introduction">
     <h2>Introduction</h2>
-    <p>This project uses an <strong>Arduino Uno</strong>, an <strong>HC-SR04 ultrasonic sensor</strong>, a
-      <strong>passive buzzer</strong>, and <strong>red/yellow/green LEDs</strong> to provide proximity-based
-      alerts, similar to automotive collision detection systems.
-    </p>
+    <p>The <strong>Procrastination Preventer</strong> Our project, the procrastination preventor relates closely with the goal of Quality an education because it helps any student that struggles with any distractions specifically on their phone by putting it in a locked box where it cannot be accessed for a period of time making them be more focused on their work rather than scrolling.</p>
+
+    <h3>What Does The Project Need To Do</h3>
+    <ul>
+      <li><strong>Automated Motorized Locking & Unlocking:</strong> A 5V stepper motor closes the door shut when a countdown starts and opens when the timer ends.</li>
+      <li><strong>Keypad-Driven Dual Timers:</strong> The user inputs a durations for both a <em>Study Timer</em> and a <em>Break Timer</em> using the keypad.</li>
+      <li><strong>Visual Telemetry & Status LEDs:</strong> A 1602A LCD screen displays live  time, while  LEDs (Red, Green, Blue) visually signal system states (e.g., Red = Locked/Study, Green = Unlocked/Break, Blue = Menu Setup).</li>
+      <li><strong>Charging & Headphone Cable Passthrough:</strong> A cut-out port allows charging or wired audio access while keeping the phone inside.</li>
+    </ul>
+
+    <h3>How We Know If It Works Well</h3>
+    <p>How we would measure its success is firstly if the box is able to close and open on its own, opening and closing when the timer is set and ends.secondly the box has to lock in place to prevent anyone from getting the phone before its timer ends serving its main purpose.thrid has an indicator for the user to confirm that it is locked and cannot be opened. Lastly this is more of a gimmick but has a hole for its charging port or wired headphones to be accessed.</p>
+
+    <h3>What Might Make It Harder To Finish</h3>
+    <p>The more difficult part of the project would have to be coding the functions of the system such as, the motor that closes/opens the door, the keypad display that takes inputs for time,the Light indicator that turns green and red based on if it's unlocked or not.</p>
+    <ul>
+      <li><strong>Stepper Motor Torque & Driver Supply:</strong> The stepper motor requires  step sequencing and stable power draw to open and close smoothly this is why we only get to use one for it to be compatible with the arduino.</li>
+    </ul>
   </section>
 
   <section id="circuit-diagram">
-    <h2>Circuit Diagram</h2>
-    <p>The ultrasonic sensor measures distance; the Arduino activates LEDs and the buzzer according to distance
-      thresholds.</p>
-    <img src="collision-warning-system-Arduino.jpg" alt="Arduino collision warning system">
+    <h2>Circuit Diagram (THIS SECTION IS TO BE EDITED)</h2>
+    <p>The potentiometer sets the timer duration, which is displayed live on the 16x2 LCD screen. Pressing the start button triggers the SG90 servo motor to rotate 90 degrees and engage the physical box latch. The Arduino counts down the remaining time on the LCD screen, holding the servo locked until the timer reaches zero.</p>
+    <img src="https://user60670.na.imgto.link/public/20261124/51cce39ed966c5d438300ed5-circutdiagram.avif" alt="Procrastination Preventer circuit diagram featuring Arduino Uno, Servo, LCD, and Potentiometer">
   </section>
 
   <section id="environment">
-    <h2>Environmental Impact Assessment</h2>
+    <h2>Environmental Impact Assessment (THIS SECTION IS TO BE EDITED)</h2>
     <ul>
-      <li><strong>Materials:</strong> The Arduino Uno is RoHS and WEEE compliant, limiting hazardous substances.
-      </li>
-      <li><strong>Energy Efficiency:</strong> The circuit draws minimal power (~50 mA at 5V), ideal for USB or
-        solar power.</li>
-      <li><strong>Reusability:</strong> All components are modular and reusable, reducing electronic waste.</li>
-      <li><strong>Packaging & Shipping:</strong> Ordering all components from a single supplier helps minimize
-        carbon footprint.</li>
+      <li><strong>Materials:</strong> Keypad: one part instead of many buttons, so less manufacturing and waste, 1 motor: roughly half the resource impact of 2, Fewer components means less e-waste (goals 7 & 12).1 motor uses less copper, magnet material, and housing, A keypad uses less plastic and wiring than separate buttons.</li>
+      <li><strong>Energy Efficiency:</strong> 1 motor draws less total power per lock cycle, A keypad scans fewer lines than many buttons, and staying within the microcontroller’s limits allows a smaller, lower-power chip.</li>
+      <li><strong>Reusability:</strong> A keypad is standard and easy to replace or reuse, Spare inputs let you reprogram the circuit later.</li>
+      <li><strong>Packaging & Shipping:</strong> Fewer parts mean a smaller, lighter product and less packaging.</li>
+      <img src="https://user60670.na.imgto.link/public/20261124/69b9c14d24f02a6159fd13f9-screenshot-2026-11-24-133647.avif" alt="Environmental Impact Assessment Image">
     </ul>
   </section>
 
-  <section id="bom">
-    <h2>Bill of Materials (BoM)</h2>
+<section id="bom">
+    <h2>Bill of Materials (BoM) (THIS SECTION IS TO BE EDITED)</h2>
     <table>
       <thead>
         <tr>
@@ -110,53 +124,53 @@
           <td><a href="https://store-usa.arduino.cc/products/arduino-uno-rev3">Arduino Store</a></td>
         </tr>
         <tr>
-          <td>HC-SR04 Ultrasonic Sensor</td>
+          <td>LEDs</td>
+          <td>3</td>
+          <td>$0.10</td>
+          <td>$0.30</td>
+          <td><a href="https://www.digikey.ca/en/products/detail/everlight-electronics-co-ltd/HLMPD150A/2675555">Digikey</a></td>
+        </tr>
+        <tr>
+        <tr>
+          <td>SG90 Micro Servo Motor</td>
           <td>1</td>
           <td>$3.95</td>
           <td>$3.95</td>
-          <td><a href="https://www.adafruit.com/product/3942">Adafruit</a></td>
+          <td><a href="https://www.adafruit.com/product/169">Adafruit</a></td>
         </tr>
         <tr>
-          <td>Passive Buzzer</td>
+          <td>16x2 LCD Display with I2C Module</td>
+          <td>1</td>
+          <td>$9.95</td>
+          <td>$9.95</td>
+          <td><a href="https://www.adafruit.com/product/398">Adafruit</a></td>
+        </tr>
+        <tr>
+          <td>10kΩ Rotary Potentiometer</td>
           <td>1</td>
           <td>$0.95</td>
           <td>$0.95</td>
-          <td><a href="https://www.sparkfun.com/passive-buzzer-module.html">SparkFun</a></td>
+          <td><a href="https://www.sparkfun.com/products/9806">SparkFun</a></td>
         </tr>
         <tr>
-          <td>LEDs (Red, Yellow, Green)</td>
-          <td>3</td>
-          <td>$0.20</td>
-          <td>$0.60</td>
-          <td>Adafruit</td>
-        </tr>
-        <tr>
-          <td>220 Ω Resistors</td>
-          <td>3</td>
-          <td>$0.03</td>
-          <td>$0.09</td>
-          <td>Adafruit</td>
-        </tr>
-        <tr>
-          <td>Breadboard</td>
+          <td>Resistors</td>
           <td>1</td>
-          <td>$4.95</td>
-          <td>$4.95</td>
-          <td><a href="https://www.adafruit.com/product/64">Adafruit</a></td>
+          <td>$0.05</td>
+          <td>$0.05</td>
+          <td><a href="https://www.digikey.ca/en/products/detail/stackpole-electronics-inc/CF14JT220R/1741346?s=N4IgTCBcDaIMIDECMAWAUgFTGADAJQAIQBdAXyA">Digikey</a></td>
         </tr>
         <tr>
-          <td>Jumper Wires</td>
+          <td>Breadboard & Jumper Wires</td>
           <td>1 set</td>
-          <td>$3.50</td>
-          <td>$3.50</td>
-          <td><a href="https://www.sparkfun.com/jumper-wires-standard-7-m-m-30-awg-30-pack.html">SparkFun</a>
-          </td>
+          <td>$8.45</td>
+          <td>$8.45</td>
+          <td><a href="https://www.sparkfun.com/products/12002">SparkFun</a></td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
           <td colspan="3">Estimated Total</td>
-          <td>$41.64</td>
+          <td>$51.35</td>
           <td>—</td>
         </tr>
       </tfoot>
@@ -164,113 +178,120 @@
   </section>
 
   <section id="prototype">
-    <h2>Prototype</h2>
+    <h2>Prototype (THIS SECTION IS TO BE EDITED)</h2>
     <p>The following image shows the assembled prototype on a breadboard.</p>
     <img  id="prototypeImage" src="prototype.jpg" alt="Collision warning system prototype">
   </section>
 
-  <section id="code">
-    <h2>Arduino Code</h2>
-    <p>The following Arduino code controls the system, lighting LEDs and activating the buzzer based on distance readings from the HC-SR04 sensor.</p>
-<div class="code-container" style="position: relative;">
-      <button class="copy-btn" onclick="copyCode()" 
-              style="position:absolute; top:8px; right:8px; z-index:10;">
-          Copy
-      </button>
+<section id="code">
+    <h2>Arduino Code (THIS SECTION IS TO BE EDITED)</h2>
+    <p>The following C++ program reads time selection from the potentiometer, displays the live countdown on the I2C LCD, and actuates the servo motor latch mechanism upon button press.</p>
+    <div class="code-container" style="position: relative;">
+      <button class="copy-btn" onclick="copyCode()" style="position:absolute; top:8px; right:8px; z-index:10;">Copy</button>
 
       <pre class="line-numbers">
- 
-  <code id="arduinoCode" class="language-cpp">
-// Collision Warning System with Distance Sensor (HC-SR04)
-// Author: Ana Rodrigues
-// Oct 2, 2025
-// Object is farther than 50cm: Green LED lights up
-// Object is closer than 50 cm, but more than 10cm away: Yellow LED lights, buzzer plays 300Hz tone
-// Object is closer than 10cm: Red LED lights up, buzzer plays 500Hz tone
+<code id="arduinoCode" class="language-cpp">
+#include &lt;Wire.h&gt;
+#include &lt;LiquidCrystal_I2C.h&gt;
+#include &lt;Servo.h&gt;
 
-//LED pins
-const int greenLED = 2;
-const int yellowLED = 3;
-const int redLED = 4;
+// Hardware Pins
+const int potPin = A0;
+const int buttonPin = 2;
+const int servoPin = 9;
 
-// Ultrasonic sensor pins
-const int trigPin = 9;
-const int echoPin = 10;
+// Objects
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+Servo lockServo;
 
-// Passive buzzer pin
-const int buzzer = 11;
+// Constants & State Parameters
+const int LOCKED_POS = 90;   // Servo locked angle (degrees)
+const int UNLOCKED_POS = 0;  // Servo unlocked angle (degrees)
+bool isLocked = false;
+int minutesToLock = 1;
 
 void setup() {
-  pinMode(greenLED, OUTPUT);
-  pinMode(yellowLED, OUTPUT);
-  pinMode(redLED, OUTPUT);
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
-  Serial.begin(9600);
+  pinMode(buttonPin, INPUT_PULLUP);
+  lockServo.attach(servoPin);
+  lockServo.write(UNLOCKED_POS);
+
+  lcd.init();
+  lcd.backlight();
+  lcd.setCursor(0, 0);
+  lcd.print("Set Time (Mins):");
 }
 
 void loop() {
-  // Measure distance
-  digitalWrite(trigPin, LOW);
-  delayMicroseconds(2);
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
+  if (!isLocked) {
+    // Read potentiometer value (maps 0-1023 analog input to 1-60 minutes)
+    int potVal = analogRead(potPin);
+    minutesToLock = map(potVal, 0, 1023, 1, 60);
 
-  long duration = pulseIn(echoPin, HIGH);
-  long distance = duration * 0.034 / 2;
+    lcd.setCursor(0, 1);
+    lcd.print("Timer: ");
+    if (minutesToLock &lt; 10) lcd.print("0");
+    lcd.print(minutesToLock);
+    lcd.print(" mins   ");
 
-  Serial.print("Distance: ");
-  Serial.print(distance);
-  Serial.println(" cm");
-  
-  //Error in measurement:
-  if (distance <= 0)
-    return;
-
-  //Too close:
-  if (distance <= 10) {
-    digitalWrite(greenLED, LOW);
-    digitalWrite(yellowLED, LOW);
-    digitalWrite(redLED, HIGH);
-    tone(buzzer, 500); // Play 500Hz tone
-    return;
+    // Check start button press (Active LOW using internal pull-up)
+    if (digitalRead(buttonPin) == LOW) {
+      delay(50); // Debounce delay
+      if (digitalRead(buttonPin) == LOW) {
+        startLockdown(minutesToLock);
+      }
+    }
   }
-
-  //Midrange:
-  if (distance <= 30) {
-    digitalWrite(greenLED, LOW);
-    digitalWrite(yellowLED, HIGH);
-    digitalWrite(redLED, LOW);
-    tone(buzzer, 300); // Play 300Hz tone
-    return;
-  }
-
-  //Normal status:
-  digitalWrite(greenLED, HIGH);
-  digitalWrite(yellowLED, LOW);
-  digitalWrite(redLED, LOW);
-  noTone(buzzer); // stop buzzer
-
   delay(100);
 }
-    </code>
-  </pre>
 
-    <script>
-      function copyCode() {
-        const code = document.getElementById('arduinoCode').innerText;
-        navigator.clipboard.writeText(code).then(() => {
-          alert('Code copied to clipboard!');
-        });
-      }
-    </script>
+void startLockdown(int totalMinutes) {
+  isLocked = true;
+  lockServo.write(LOCKED_POS);
+
+  long totalSeconds = (long)totalMinutes * 60;
+
+  while (totalSeconds &gt; 0) {
+    long minsLeft = totalSeconds / 60;
+    long secsLeft = totalSeconds % 60;
+
+    lcd.setCursor(0, 0);
+    lcd.print("   LOCKED OUT!  ");
+    lcd.setCursor(0, 1);
+    lcd.print("Time: ");
+    if (minsLeft &lt; 10) lcd.print("0");
+    lcd.print(minsLeft);
+    lcd.print(":");
+    if (secsLeft &lt; 10) lcd.print("0");
+    lcd.print(secsLeft);
+    lcd.print("   ");
+
+    delay(1000);
+    totalSeconds--;
+  }
+
+  // Timer finished - release lock mechanism
+  lockServo.write(UNLOCKED_POS);
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print(" Time's Up! ");
+  lcd.setCursor(0, 1);
+  lcd.print(" Box Unlocked ");
+  delay(5000);
+
+  isLocked = false;
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Set Time (Mins):");
+}
+</code>
+      </pre>
+    </div>
   </section>
 
 
 
   <section id="conclusion">
-    <h2>Conclusion</h2>
+    <h2>Conclusion (THIS SECTION IS TO BE EDITED)</h2>
     <p>The system effectively demonstrates distance-based alerting using Arduino. It’s affordable, educational, and
       sustainable through reusable components.</p>
   </section>
@@ -280,61 +301,31 @@ void loop() {
 
   <ul>
     <li>
-      Arduino Project Hub. (n.d.). 
-      <em>Ultrasonic sensor projects.</em> 
-      Arduino Project Hub. 
-      <a href="https://projecthub.arduino.cc/projects/tags/ultrasonic-sensor" target="_blank" rel="noopener noreferrer">
-        https://projecthub.arduino.cc/projects/tags/ultrasonic-sensor
-      </a>
+      <a href="https://www.arduino.cc/en/Guide/ArduinoUno">Arduino Uno Guide</a> - Official Arduino documentation for the Arduino Uno board.
     </li>
-
+      <li>
+      <a href="https://www.youtube.com/watch?v=T00WozfH-44">Collision Warning System Project</a> - YouTube video demonstrating the collision warning system project.
+    </li>
     <li>
-      Arduino Project Hub. (n.d.). 
-      <em>Buzzer projects.</em> 
-      Arduino Project Hub. 
-      <a href="https://create.arduino.cc/projecthub/projects/tags/buzzer" target="_blank" rel="noopener noreferrer">
-        https://create.arduino.cc/projecthub/projects/tags/buzzer
-      </a>
+      <a href="https://www.youtube.com/watch?v=xf4Bnm8edAg">Collision Warning System Project</a> - YouTube video demonstrating the collision warning system project.
     </li>
-
     <li>
-      Arduino Project Hub. (n.d.). 
-      <em>LED projects.</em> 
-      Arduino Project Hub. 
-      <a href="https://projecthub.arduino.cc/projects/tags/led" target="_blank" rel="noopener noreferrer">
-        https://projecthub.arduino.cc/projects/tags/led
-      </a>
-    </li>
-
+        <a href="https://www.arduino.cc/reference/en/libraries/servo/">Arduino Servo Library Documentation</a> - Technical reference for controlling pulse-width modulation (PWM) signals to drive servo motor latch mechanisms.
+      </li>
+      <li>
+        <a href="https://docs.arduino.cc/learn/electronics/liquid-crystal-displays/">Arduino LiquidCrystal & I2C Guide</a> - Technical specification and interfacing documentation for displaying countdown timers on 16x2 LCD modules.
+      </li>
+      <li>
+        <a href="https://www.adafruit.com/product/169">Adafruit SG90 Servo Technical Specs</a> - Specification details, torque ratings, and operating voltage ranges for the micro servo motor.
+      </li>
     <li>
-      Instructables. (n.d.). 
-      <em>Distance measurement using ultrasonic sensor.</em> 
-      Instructables. 
-      <a href="https://www.instructables.com/Arduino-Distance-Measurement-Using-Ultrasonic-Senso/" target="_blank" rel="noopener noreferrer">
-        https://www.instructables.com/Arduino-Distance-Measurement-Using-Ultrasonic-Senso/
-      </a>
-    </li>
-
-    <li>
-      Circuit Basics. (n.d.). 
-      <em>How to use an ultrasonic sensor with Arduino.</em> 
-      Circuit Basics. 
-      <a href="https://www.circuitbasics.com/how-to-use-an-ultrasonic-sensor-with-arduino/" target="_blank" rel="noopener noreferrer">
-        https://www.circuitbasics.com/how-to-use-an-ultrasonic-sensor-with-arduino/
-      </a>
-    </li>
-
-    <li>
-      Last Minute Engineers. (n.d.). 
-      <em>Ultrasonic sensor tutorial.</em> 
-      Last Minute Engineers. 
-      <a href="https://lastminuteengineers.com/ultrasonic-sensor-arduino-tutorial/" target="_blank" rel="noopener noreferrer">
-        https://lastminuteengineers.com/ultrasonic-sensor-arduino-tutorial/
-      </a>
-    </li>
+        <a href="https://www.hackster.io/engineerkid/arduino-controlled-safe-locker-344caf">Arduino Controlled Safe Locker</a> - Reference implementation for building motorized safe locking mechanisms and electronic latches.
+      </li>
+      <li>
+        <a href="https://www.circuitbasics.com/how-to-set-up-a-keypad-on-an-arduino/">How to Set Up a Keypad on an Arduino</a> - Interfacing tutorial for setting up matrix keypads, parsing inputs, and configuring timer parameters.
+      </li>
   </ul>
 </section>
-
 
 
 </body>
